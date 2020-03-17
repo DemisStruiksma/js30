@@ -100,7 +100,8 @@
     }
 
     function deletingAll(e) {
-      // write code block to ensure that all items are deleted on eventlistener
+      localStorage.removeItem('items');
+      location.reload();
     }
 
     addItems.addEventListener('submit', addItem);
