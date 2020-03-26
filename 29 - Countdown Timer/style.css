@@ -16,6 +16,7 @@ body {
 }
 
 .display__time-left {
+  transition: 0.5s;
   font-weight: 100;
   font-size: 20rem;
   margin: 0;
@@ -79,4 +80,10 @@ body {
 .display__end-time {
   font-size: 4rem;
   color: white;
+}
+
+.timeIsUp {
+  color: red;
+  transition: 0.5s;
+  transform: scale(1.2);
 }
