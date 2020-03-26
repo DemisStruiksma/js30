@@ -3,6 +3,7 @@ const timerDisplay = document.querySelector('.display__time-left')
 const endTime = document.querySelector('.display__end-time')
 const endMessage = document.querySelector('.display__end-message');
 const buttons = document.querySelectorAll('[data-time]');
+const audio = document.querySelector('audio');
 
 function timer(seconds) {
     // clear any existing timers
@@ -20,7 +21,9 @@ function timer(seconds) {
       const secondsLeft = Math.round((then - Date.now()) / 1000);
 
       // Add message after timer has expired  
-      function displayEndMessage() {
+      function displayEndMessage() {  
+        audio.currentTime = 0;
+        audio.play();
         timerDisplay.innerHTML = 'TIME IS UP';
         endTime.innerHTML = 'Get back now ...'
         // Add class to animate text
