@@ -87,3 +87,22 @@ body {
   transition: 0.5s;
   transform: scale(1.2);
 }
+
+.alarmBtn {
+  display: none;
+  background-color: red;
+  border: none;
+  color: white;
+  width: auto;
+  padding: 16px;
+}
+
+.alarmBtn:hover {
+  opacity: 0.8;
+  cursor: pointer;  
+}
+
+.activeAlarmBtn {
+  display: block;
+  transition: 0.5s;
+}
