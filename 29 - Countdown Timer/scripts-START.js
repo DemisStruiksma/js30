@@ -6,7 +6,7 @@ const buttons = document.querySelectorAll('[data-time]');
 const audio = document.querySelector('audio');
 const audioBtn = document.querySelector('.alarmBtn')
 
-function timer(seconds) {
+function timer(seconds) { // ADD FUNCTIONALITIES TO TIMER
     // clear any existing timers
     clearInterval(countdown);
 
@@ -14,11 +14,17 @@ function timer(seconds) {
     const then = now + seconds * 1000;
     displayTimeLeft(seconds);
     displayEndTime(then);
+
+    // Add class for intro text
+    timerDisplay.classList.add('.intro');
+
     // Remove timer expiration animation class @ the start
     timerDisplay.classList.remove('timeIsUp');
     endTime.classList.remove('timeIsUp');
+
     // Remove pause button when alarm is not playing
     audioBtn.classList.remove('activeAlarmBtn');
+
     // prevent audio from playing when new timer is started and not yet expired 
     audio.currentTime = 0;
     audio.pause();
@@ -55,6 +61,7 @@ function timer(seconds) {
           displayEndMessage();
           return;
       }
+
       //display it
       displayTimeLeft(secondsLeft);
     }, 1000);
@@ -67,6 +74,8 @@ function displayTimeLeft(seconds) {
     const display = `${minutes}:${remainderSeconds < 10 ? '0' : '' }${remainderSeconds}`;
     document.title = display;
     timerDisplay.textContent = display;
+    // Remove class for intro text
+    timerDisplay.classList.remove('intro');
   }
 
 function displayEndTime(timestamp) {
