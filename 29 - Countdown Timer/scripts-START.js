@@ -35,7 +35,6 @@ function timer(seconds) { // ADD FUNCTIONALITIES TO TIMER
       function pauseAlarm() {
        audio.currentTime = 0;
        audio.pause();
-       console.log(pauseAlarm);
       }
 
       // Add message after timer has expired  
