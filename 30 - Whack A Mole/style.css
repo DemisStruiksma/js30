@@ -28,6 +28,11 @@ h1 {
   border-radius: 1rem;
 }
 
+.allScoreBoard {
+  position: fixed;
+  font-size: 4rem;
+}
+
 .game {
   width: 600px;
   height: 400px;
