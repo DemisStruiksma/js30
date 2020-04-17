@@ -51,7 +51,12 @@ body {
 
 .timer__controls input {
   flex: 1;
-  border: 0;
+  font-size: 2rem;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #eee;
   padding: 2rem;
 }
 
