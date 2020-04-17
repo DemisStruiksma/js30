@@ -96,6 +96,7 @@ body {
   color: red;
   transition: 0.5s;
   transform: scale(1.2);
+  font-weight: bold;
 }
 
 .alarmBtn {
