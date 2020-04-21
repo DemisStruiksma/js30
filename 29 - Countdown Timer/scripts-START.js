@@ -75,6 +75,9 @@ function displayTimeLeft(seconds) {
     timerDisplay.textContent = display;
     // Remove class for intro text
     timerDisplay.classList.remove('intro');
+    if (isNaN(seconds)) {
+          alert('Please enter a valid number of minutes.');
+        }
   }
 
 function displayEndTime(timestamp) {
@@ -94,8 +97,5 @@ document.customForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const mins = this.minutes.value;
     timer(mins * 60);
-    if (isNaN(e)) {
-    
-    }
     this.reset(); 
 });
