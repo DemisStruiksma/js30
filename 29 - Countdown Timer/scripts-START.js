@@ -77,6 +77,7 @@ function displayTimeLeft(seconds) {
     timerDisplay.classList.remove('intro');
     if (isNaN(seconds)) {
           alert('Please enter a valid number of minutes.');
+          location.reload();
         }
   }
 
