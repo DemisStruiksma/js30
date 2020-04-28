@@ -4,7 +4,11 @@ const endTime = document.querySelector('.display__end-time')
 const endMessage = document.querySelector('.display__end-message');
 const buttons = document.querySelectorAll('[data-time]');
 const audio = document.querySelector('audio');
-const audioBtn = document.querySelector('.alarmBtn')
+const audioBtn = document.querySelector('.alarmBtn');
+// Add pre-set timers
+const addItems = document.querySelector('.form-group');
+const itemsList = document.querySelector('.timer__controls');
+const items = JSON.parse(localStorage.getItem('items')) || []; 
 
 function timer(seconds) { // ADD FUNCTIONALITIES TO TIMER
     // clear any existing timers
@@ -67,6 +71,31 @@ function timer(seconds) { // ADD FUNCTIONALITIES TO TIMER
     
 }
 
+
+function addItem(e) {
+  e.preventDefault();
+  const number = (this.querySelector(['[name=item]'])).value;
+  const item = {
+    number,
+    done: false
+  }
+  items.push(item);
+  populateList(items, itemsList);
+  localStorage.setItem('items', JSON.stringify(items));
+  this.reset();
+}
+
+// function populateList(plates = [], platesList) {
+//   platesList.innerHTML = plates.map((plate, i) => {
+//     return `
+//     <li>
+//       <input type="checkbox" data-index=${i} id="item${i}" ${plate.done ? 'checked' : ''} />
+//       <label for="item${i}">${plate.text}</label>
+//     </li>
+//   `;
+//   }).join('');
+// }
+
 function displayTimeLeft(seconds) {
     const minutes = Math.floor(seconds / 60);
     const remainderSeconds = seconds % 60;
@@ -100,3 +129,6 @@ document.customForm.addEventListener('submit', function(e) {
     timer(mins * 60);
     this.reset(); 
 });
+
+addItems.addEventListener('click', addItem);
+populateList(items, itemsList);
