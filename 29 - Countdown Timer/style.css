@@ -85,6 +85,21 @@ body {
   justify-content: center;
 }
 
+.addTimer {
+  font-size: 2rem;
+  border-radius: 0%;
+  background-color: #242582;
+  border-color: #242582;
+  transition: ease-in-out 0.5s;
+}
+
+.addTimer:hover,
+.addTimer:focus { 
+  background-color: #242582;
+  border-color: #242582;
+  opacity: 0.5;
+}
+
 .display__end-time {
   font-size: 4rem;
   color: black;
