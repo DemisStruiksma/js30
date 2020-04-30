@@ -47,9 +47,10 @@ body {
   display: flex;
 }
 
-.timer__controls input {
+.timer__controls .form-control {
   flex: 1;
   font-size: 1rem;
+  border-radius: 0;
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
