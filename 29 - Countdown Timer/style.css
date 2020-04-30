@@ -136,3 +136,21 @@ body {
 .activeAlarmBtn {
   color: white;
 }
+
+.pauseTimer {
+  display: none;
+  background-color: black;
+  border: none;
+  color: white;
+  width: auto;
+  padding: 16px;
+}
+
+.resumeTimer {
+  display: none;
+  background-color: black;
+  border: none;
+  color: white;
+  width: auto;
+  padding: 16px;
+}
