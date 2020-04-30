@@ -48,7 +48,6 @@ body {
 }
 
 .timer__controls .form-control {
-  flex: 1;
   font-size: 1rem;
   border-radius: 0;
   border-top-style: hidden;
@@ -66,7 +65,7 @@ body {
   color: white;
   font-size: 1rem;
   text-transform: uppercase;
-  background: black;
+  background: #363787;
   border-bottom: 3px solid rgba(0,0,0,0.2);
   border-right: 1px solid rgba(0,0,0,0.2);
   padding: 1rem;
