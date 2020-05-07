@@ -129,11 +129,8 @@ body {
 }
 
 .activeAlarmBtn {
-  display: block;
+  display: inline-block;
   transition: 0.5s;
-}
-
-.activeAlarmBtn {
   color: white;
 }
 
@@ -146,6 +143,16 @@ body {
   padding: 16px;
 }
 
+.activePauseBtn {
+  display: inline-block;
+}
+
+.activePauseBtn:hover {
+  opacity: 0.8;
+  color: white;
+  cursor: pointer;  
+}
+
 .resumeTimer {
   display: none;
   background-color: black;
@@ -153,4 +160,14 @@ body {
   color: white;
   width: auto;
   padding: 16px;
+}
+
+.activeResumeBtn {
+  display: inline-block;
+}
+
+.activeResumeBtn:hover {
+  opacity: 0.8;
+  color: white;
+  cursor: pointer;  
 }
