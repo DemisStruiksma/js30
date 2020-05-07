@@ -31,11 +31,11 @@ function timer(seconds) { // ADD FUNCTIONALITIES TO TIMER
     // Remove pause button when alarm is not playing
     audioBtn.classList.remove('activeAlarmBtn');
 
-    // Don't display timer pause button
-    pauseBtn.classList.remove('activePauseBtn');
+     // Add pause button
+     pauseBtn.classList.add('activePauseBtn');
 
-    // Don't display resume button 
-    resumeBtn.classList.remove('activeResumeBtn');
+     // Add resume button
+     resumeBtn.classList.add('activeResumeBtn');
 
     // prevent audio from playing when new timer is started and not yet expired 
     audio.currentTime = 0;
@@ -64,11 +64,11 @@ function timer(seconds) { // ADD FUNCTIONALITIES TO TIMER
         audioBtn.classList.add('activeAlarmBtn');
         audioBtn.addEventListener('click', pauseAlarm);
 
-        // Add pause button
-        pauseBtn.classList.add('activePauseBtn');
+        // Don't display timer pause button
+        pauseBtn.classList.remove('activePauseBtn');
 
-        // Add resume button
-        resumeBtn.classList.add('activeResumeBtn');
+        // Don't display resume button 
+        resumeBtn.classList.remove('activeResumeBtn');
       }
 
 
