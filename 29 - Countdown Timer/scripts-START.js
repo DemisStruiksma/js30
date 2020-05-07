@@ -5,6 +5,8 @@ const endMessage = document.querySelector('.display__end-message');
 const buttons = document.querySelectorAll('[data-time]');
 const audio = document.querySelector('audio');
 const audioBtn = document.querySelector('.alarmBtn');
+const resumeBtn = document.querySelector('.resumeTimer');
+const pauseBtn = document.querySelector('.pauseTimer');
 // Add pre-set timers
 const addItems = document.querySelector('.form-group');
 const itemsList = document.querySelector('.timer__controls');
@@ -28,6 +30,12 @@ function timer(seconds) { // ADD FUNCTIONALITIES TO TIMER
 
     // Remove pause button when alarm is not playing
     audioBtn.classList.remove('activeAlarmBtn');
+
+    // Don't display timer pause button
+    pauseBtn.classList.remove('activePauseBtn');
+
+    // Don't display resume button 
+    resumeBtn.classList.remove('activeResumeBtn');
 
     // prevent audio from playing when new timer is started and not yet expired 
     audio.currentTime = 0;
@@ -55,6 +63,12 @@ function timer(seconds) { // ADD FUNCTIONALITIES TO TIMER
         // Add audio pause button
         audioBtn.classList.add('activeAlarmBtn');
         audioBtn.addEventListener('click', pauseAlarm);
+
+        // Add pause button
+        pauseBtn.classList.add('activePauseBtn');
+
+        // Add resume button
+        resumeBtn.classList.add('activeResumeBtn');
       }
 
 
@@ -131,4 +145,4 @@ document.customForm.addEventListener('submit', function(e) {
 });
 
 addItems.addEventListener('click', addItem);
-populateList(items, itemsList);
+// populateList(items, itemsList);
